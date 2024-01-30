@@ -1,62 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Shynhsiri</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- --------- UNICONS ---------- -->
     <link
       rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="Assets/icon.png" type="image/x-icon" />
+
+    <title>Portfolio | Shynhsiri</title>
   </head>
   <body>
-    <header>
-      <h1>Welcome to my website!</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <div class="container">
+      <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">Shynhsiri</p>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <li class="nav_list">
+              <a href="#home" class="nav-link active-link">Home</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="#about" class="nav-link">About</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="#projects" class="nav-link">Projects</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="#contact" class="nav-link">Contact</a>
+              <div class="circle"></div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
       </nav>
-    </header>
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          Hi, I'm Shynhsiri. I'm a Junior Back-end developer based in
-          Iran/Tehran.
-        </p>
-      </section>
-      <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-item">
-          <img src="portfolio-item-1.jpg" alt="Portfolio Item 1" />
-          <h3>Portfolio Item 1</h3>
-          <p>Description of Portfolio Item 1</p>
+
+      <!-- -------------- MAIN ---------------- -->
+      <main class="wrapper">
+        <!-- -------------- FEATURED BOX ---------------- -->
+        <section class="featured-box" id="home">
+          <div class="featured-text">
+            <div class="featured-text-card">
+              <span>Shayan Hasiri</span>
+            </div>
+            <div class="featured-name">
+              <p>I'm <span class="typedText"></span></p>
+            </div>
+            <div class="featured-text-info">
+              <p>
+                Computer science student with a background in backend
+                development ready to learn and contribute to team success.
+              </p>
+            </div>
+            <div class="social_icons">
+              <div class="icon">
+                <a
+                  class="icon_link"
+                  href="https://github.com/shynhsiri"
+                  target="_blank"
+                  ><i class="uil uil-github-alt"></i
+                ></a>
+              </div>
+              <div class="icon">
+                <a
+                  class="icon_link"
+                  href="https://www.linkedin.com/in/shayan-hasiri-4150b3289/"
+                  target="_blank"
+                  ><i class="uil uil-linkedin-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+              <img src="assets/myimage.jpg" alt="avatar" />
+            </div>
+          </div>
+        </section>
+        <!-- -------------- ABOUT BOX ---------------- -->
+        <section class="section" id="about">
+          <div class="top-header">
+            <h1>About</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="about-info">
+                <h3>My introduction</h3>
+                <p>
+                  I am Shayan Hasiri computer science student based in
+                  Iran/Tehran , All i know about programming i learnd by my self
+                  and I'm looking for a trainee position right now to be more
+                  comfort with my skills and get to know how to use them in
+                  bigger projects.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Frontend</h3>
+                </div>
+                <div class="skills-list">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Bootstrap</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Backend</h3>
+                </div>
+                <div class="skills-list">
+                  <span>Python</span>
+                  <span>Django</span>
+                  <span>DRF</span>
+                </div>
+              </div>
+              <div class="skills-box">
+                <div class="skills-header">
+                  <h3>Database</h3>
+                </div>
+                <div class="skills-list">
+                  <span>MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- -------------- PROJECT BOX ---------------- -->
+
+        <section class="section" id="projects">
+          <div class="top-header">
+            <h1>Projects</h1>
+          </div>
+          <div class="project-container">
+            <div class="project-box">
+              <i class="uil uil-briefcase-alt"></i>
+              <h3>Completed</h3>
+              <label>4 Finished Projects</label>
+            </div>
+            <div class="project-box">
+              <i class="uil uil-users-alt"></i>
+              <h3>Clients</h3>
+              <label>-</label>
+            </div>
+            <div class="project-box">
+              <i class="uil uil-award"></i>
+              <h3>Experience</h3>
+              <label>1 Year in the field</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- -------------- CONTACT BOX ---------------- -->
+
+        <section class="section" id="contact">
+          <div class="top-header">
+            <h1>Contact</h1>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="contact-info">
+                <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                <p>
+                  <i class="uil uil-envelope"></i> Email: shynhsiri@gmail.com
+                </p>
+                <p><i class="uil uil-phone"></i> Tel: 09336677841</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- --------------- FOOTER --------------- -->
+      <footer>
+        <div class="top-footer">
+          <p>Shayan Hasiri</p>
         </div>
-        <div class="portfolio-item">
-          <img src="portfolio-item-2.jpg" alt="Portfolio Item 2" />
-          <h3>Portfolio Item 2</h3>
-          <p>Description of Portfolio Item 2</p>
+        <div class="middle-footer">
+          <ul class="footer-menu">
+            <li class="footer_menu_list">
+              <a href="#home">Home</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#about">About</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
-        <div class="portfolio-item">
-          <img src="portfolio-item-3.jpg" alt="Portfolio Item 3" />
-          <h3>Portfolio Item 3</h3>
-          <p>Description of Portfolio Item 3</p>
+        <div class="footer-social-icons">
+          <div class="icon">
+            <a
+              class="icon_link"
+              href="https://github.com/shynhsiri"
+              target="_blank"
+              ><i class="uil uil-github-alt"></i
+            ></a>
+          </div>
+          <div class="icon">
+            <a
+              class="icon_link"
+              href="https://www.linkedin.com/in/shayan-hasiri-4150b3289/"
+              target="_blank"
+              ><i class="uil uil-linkedin-alt"></i
+            ></a>
+          </div>
         </div>
-      </section>
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <a href="https://github.com/shynhsiri"
-          ><i class="fi fi-brands-github"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/shayan-hasiri-4150b3289/"
-          ><i class="fi fi-brands-linkedin"></i
-        ></a>
-      </section>
-    </main>
-    <footer>
-      <h3>Thanks for visiting.</h3>
-    </footer>
+        <div class="bottom-footer">
+          <p>Thanks for visiting.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="main.js"></script>
   </body>
 </html>
